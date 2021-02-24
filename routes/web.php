@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-   return view('exampleEasycheckout');
-});
+// Route::get('/', function () {
+//    return view('exampleEasycheckout');
+// });
 
 Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
 Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
@@ -28,7 +28,7 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 
 
-//Route::get('/','FrontendController@index');
+Route::get('/','FrontendController@index');
 Route::get('about-us','FrontendController@aboutus')->name('about.us');
 Route::get('/shopping/cart','FrontendController@shoppingCart')->name('shopping.cart');
 Route::get('/product-list','FrontendController@productList')->name('product.list');
